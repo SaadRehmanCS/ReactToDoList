@@ -2,16 +2,19 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+
+const DATA = 
+[{ subject: "Eat", id: "todo-0", completed: true },
+{ subject: "Sleep", id: "todo-1", completed: false },
+{ subject: "Repeat", id: "todo-2", completed: false }]
+
+const fBArray = [{ name: "All", completed: "true" },
+  {name: "Active", completed: "false"}, {name: "Completed", completed: "false"}]
 
 ReactDOM.render(
   <React.StrictMode>
-    <App subject="Clarice"/>
+    <App tasks={DATA} fBArray={fBArray}/>
   </React.StrictMode>,
   document.getElementById('root')
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
